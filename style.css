@@ -76,3 +76,14 @@ img {
         padding: 5rem;
     }
 }
+@media screen and (min-width: 1200px) {
+    .tarif {
+        padding: 5rem 7rem;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .tarif {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+}

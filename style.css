@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+html {
+    font-size: 62.5%; /* 10px */
+}
+body {
+    font-size: 1.6rem;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.tarif {
+    padding: 2rem;
+}
+.tarif__form {
+    border: 3px solid blue;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+    margin-bottom: 4rem;
+}
+.tarif__input, .tarif__button {
+    font-size: 2.4rem;
+}
+.tarif__input {
+    flex-grow: 1;
+    background-color: lime;
+    border: 0;
+    outline: 0;
+}
+.tarif__button {
+    background-color: orangered;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+}
+.badge {
+    display: inline-block;
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    background-color: aqua;
+}
+.badge__small {
+    font-size: 2rem;
+}
+.tarif__list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.tarif__item {
+    border: 2px solid red;
+    font-size: 2.4rem;
+    font-weight: bold;
+    justify-self: center;
+    align-self: center;
+}
+@media screen and (min-width: 515px) {
+    .tarif__form {
+        border-radius: 50px;
+        flex-direction: row;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .tarif__list {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .tarif {
+        padding: 5rem;
+    }
+}

@@ -2,6 +2,13 @@
     box-sizing: border-box;
     margin: 0;
 }
+:root {
+    --primary-color: #2584FF;
+    --secondary-color: #00D9FF;
+    --accent-color: #FF3400;
+    --text-primary: #1B0760;
+    --text-secondary: #9591A8;
+}
 html {
     font-size: 62.5%; /* 10px */
 }
@@ -17,10 +24,66 @@ img {
 /* home START */
 .home {
     background-color: black;
-    padding: 120px;
     color: white;
-    clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 92%, 0% 100%);
 } 
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+    border-bottom: 1px solid var(--text-secondary);
+}
+.home__button {
+    background-color: transparent;
+    font-size: 2rem;
+    color: var(--text-secondary);
+    border: 2px solid var(--text-secondary);
+    padding: 5px 9px;
+    border-radius: 4px;
+}
+.nav {
+    display: none;
+}
+.nav__list {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 2.3rem;
+}
+.nav__link {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 3rem;
+}
+.home__section {
+    padding: 6rem;
+    padding-bottom: 15rem;
+}
+.home__section {
+    text-align: center;
+}
+.title {
+    font-size: 8rem;
+}
+.lead {
+    font-size: 4rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+.home__link {
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+    padding: 2rem 7rem;
+    background-color: var(--accent-color);
+    display: inline-block;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
 /* home END */
 
 /* cards START */
@@ -35,7 +98,7 @@ img {
     font-size: 2.4rem;
 }
 .link {
-    color: red;
+    color: var(--accent-color);
     font-size: 3rem;
     text-decoration: none;
 }
@@ -71,7 +134,7 @@ img {
     outline: 0;
 }
 .tarif__button {
-    background-color: orangered;
+    background-color: var(--accent-color);
     padding: 1rem 2rem;
     border-radius: 30px;
 }
@@ -79,7 +142,8 @@ img {
     display: inline-block;
     padding: 1rem 3rem;
     border-radius: 30px;
-    background-color: aqua;
+    background-color: var(--secondary-color);
+    color: white;
 }
 .badge__small {
     font-size: 2rem;
@@ -100,11 +164,41 @@ img {
 }
 /* tarif END */
 
+.image {
+    border: 5px solid red;
+    width: 500px;
+    transition: 0.2s scale;
+}
+.image:hover {
+    scale: 1.05;
+}
+
 /* media START */
 @media screen and (min-width: 515px) {
     .tarif__form {
         border-radius: 50px;
         flex-direction: row;
+    }
+}
+@media screen and (min-width: 780px) {
+    .home__button {
+        display: none;
+    }
+    .nav {
+        display: block;
+    }
+    .home__section {
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .home__content {
+        width: 48%;
+    }
+    .home__image {
+        width: 48%;
     }
 }
 @media screen and (min-width: 1000px) {
@@ -118,6 +212,9 @@ img {
 @media screen and (min-width: 1200px) {
     .tarif {
         padding: 5rem 7rem;
+    }
+    .title {
+        font-size: 10rem;
     }
 }
 @media screen and (min-width: 1400px) {

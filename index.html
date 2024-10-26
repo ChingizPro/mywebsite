@@ -12,7 +12,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="home">home</div>
+    <main class="home">
+        <header class="header">
+            <a href="#" class="logo">
+                <img class="logo__image" src="images/logo.svg" alt="logo">
+            </a>
+            <button class="home__button">
+                <i class="home__icon fa-solid fa-bars"></i>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Link</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Link</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Link</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Link</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="home__section">
+            <div class="home__content">
+                <h1 class="title">Lorem ipsum dolor sit.</h1>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#" class="home__link">get started</a>
+            </div>
+            <img class="home__image" src="images/home_banner.webp" alt="home_banner">
+        </section>
+    </main>
     <section class="tarif">
         <form class="tarif__form">
             <input class="tarif__input" type="search" name="search" placeholder="Enter domain name here...">
@@ -48,9 +81,9 @@
             <img src="images/photo.jpg" alt="photo">
         </picture> -->
         <!-- picture for retina display -->
-        <picture>
+        <picture class="picture">
             <source srcset="images/photo@2x.jpg 1x, images/photo@2x.jpg">
-            <img src="images/photo.jpg" alt="photo">
+            <img class="image" src="images/photo.jpg" alt="photo">
         </picture>
         <!-- both retina and media -->
         <!-- <picture>

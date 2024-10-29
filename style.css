@@ -176,6 +176,32 @@ img {
 .image:hover {
     scale: 1.05;
 }
+/* panel START */
+.panel {
+    background-color: #000000;
+    color: white;
+    padding: 3rem;
+}
+.panel__flex {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 17px;
+    margin-top: 3rem;
+    line-height: 1.5;
+}
+.panel__icon {
+    font-size: 40px;
+    color: var(--primary-color);
+}
+.panel__title {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.panel__image {
+    width: 100%;
+}
+/* panel END */
 
 /* media START */
 @media screen and (min-width: 515px) {
@@ -211,6 +237,20 @@ img {
     }
     .tarif {
         padding: 5rem;
+    }
+    .panel {
+        padding: 6rem 10rem;
+        font-size: 2.1rem;
+    }
+    .panel__row {
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+        column-gap: 4%;
+    }
+    .panel__image {
+        width: auto;
+        max-width: 700px;
+        justify-self: end;
     }
 }
 @media screen and (min-width: 1200px) {
